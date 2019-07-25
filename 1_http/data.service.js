@@ -1,4 +1,5 @@
 module.value("dataService", {
-    allPosts : {},
-    post : null    
+    allPosts : null,
+    post : null,
+    postError : null   
 })

@@ -13,8 +13,10 @@ module.service("serviceService", function (globalConst, dataService, $http) {
         let p = $http.get(`${globalConst.url}/${id}`)
     p.then( (resp) => {
         dataService.post = resp.data 
+        dataService.allPosts = null
     }, (err) => {
-        dataService.post = err  
+        dataService.postError = err  
+        dataService.post = null
     })
     };
 });

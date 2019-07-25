@@ -35,6 +35,7 @@
             </tr>
         </table>
 
+        <p ng-show="ds.post === null">Error !!! --> {{ds.postError}}</p>
         <table ng-show="ds.post !== null" border="1">
             <tr style="background:lightyellow ; padding: 10px">
                 <th>userId</th>
