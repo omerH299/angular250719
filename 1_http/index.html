@@ -18,8 +18,37 @@
         </label></p>
         <button ng-click="getPost(id)">Get the post</button>
         <hr>
-        <p ng-show="ds.post === null" ng-repeat="post in ds.allPosts">{{post}}</p>
-        <p ng-show="ds.post !== null">{{ds.post}}</p>
+        <table ng-show="ds.post === null" border="1">
+            <tr style="background:lightyellow ; padding: 10px">
+                <th>#</th>
+                <th>userId</th>
+                <th>id</th>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+            <tr ng-repeat="post in ds.allPosts">
+                <td> {{$index}} </td>
+                <td>{{post.userId}}</td>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+        </table>
+
+        <table ng-show="ds.post !== null" border="1">
+            <tr style="background:lightyellow ; padding: 10px">
+                <th>userId</th>
+                <th>id</th>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+            <tr>
+                <td>{{ds.post.userId}}</td>
+                <td>{{ds.post.id}}</td>
+                <td>{{ds.post.title}}</td>
+                <td>{{ds.post.body}}</td>
+            </tr>
+        </table>
     </div>
 
     
