@@ -17,6 +17,7 @@ module.service("serviceService", function (globalConst, dataService, $http) {
     }, (err) => {
         dataService.postError = err  
         dataService.post = null
+        dataService.allPosts = null
     })
     };
 });
