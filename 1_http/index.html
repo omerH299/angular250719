@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Http request!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="globalconst.service.js"></script>
+    <script src="data.service.js"></script>
+    <script src="service.service.js"></script>
+    <script src="parentCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <p>Choose id of post : <label>
+            <input type="number" ng-model="id">
+        </label></p>
+        <button ng-click="getPost(id)">Get the post</button>
+        <hr>
+        <p ng-show="ds.post === null" ng-repeat="post in ds.allPosts">{{post}}</p>
+        <p ng-show="ds.post !== null">{{ds.post}}</p>
+    </div>
+
+    
+    <br>
+</body>
+</html>
